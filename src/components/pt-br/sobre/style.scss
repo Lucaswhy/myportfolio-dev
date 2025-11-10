@@ -1,47 +1,44 @@
-@import '@/assets/scss/_color.scss';
+div {
+  :is(button) {
+    background-color: $subColor;
+    color: $fontColor;
+    font-size: 16px;
+    border-radius: 10px;
+    min-width: 7em;
+    height: 3em;
+    line-height: 0px;
+  }
 
-div{
-    :is(button){
-        background-color: $subColor;
-        color: $fontColor;
-        font-size: 16px;
+  .div__main {
+    display: flex;
+    justify-content: space-around;
+    color: $fontColor;
+    font-size: 18px;
+    @media only screen and (max-width: 992px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .div__text {
+      max-width: 500px;
+      text-align: justify;
+      div {
+        text-align: center;
+      }
+    }
+    .div__figure {
+      @media only screen and (max-width: 992px) {
+        order: -1;
+        margin: 0 auto;
+      }
+      img {
+        width: 400px;
+        height: auto;
         border-radius: 10px;
-        min-width: 7em;
-        height: 3em;
-        line-height: 0px;
+        @media only screen and (max-width: 992px) {
+          width: 200px;
+        }
+      }
     }
-
-    .div__main{
-        display: flex;
-        justify-content: space-around;
-        color: $fontColor;
-        font-size: 18px;
-        @media only screen and (max-width: 992px){
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        
-        .div__text{
-            max-width: 500px;
-            text-align: justify;
-            div{
-                text-align: center;
-            }
-        }
-        .div__figure{
-            @media only screen and (max-width: 992px){
-                order: -1;
-                margin: 0 auto;
-            }
-            img{
-                width: 400px;
-                height: auto;
-                border-radius: 10px;
-                @media only screen and (max-width: 992px){
-                    width: 200px;
-                }
-                
-            }
-        }
-    }
+  }
 }

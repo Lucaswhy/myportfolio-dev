@@ -1,42 +1,29 @@
 <template>
   <div id="app">
-    <Header v-if="language == 'pt'"/>
-    <HeaderEn v-if="language == 'en'"/>
-    <div style="min-height: 80vh;">
-      <router-view/>
+    <Header v-if="currentLanguage === 'pt'"></Header>
+    <HeaderEn v-if="currentLanguage === 'en'" />
+    <div style="min-height: 80vh">
+      <router-view />
     </div>
-    <Footer/>
+    <Footer></Footer>
   </div>
 </template>
 
-<script>
-import Header from './components/header/header.vue'
-import HeaderEn from './components/header-en/header-en.vue'
-import Footer from './components/footer/footer.vue'
-export default {
-  name: 'App',
-  components: { Header, HeaderEn, Footer},
-  data(){
-    return{
-    language: ''
-    }
+<script setup>
+import { ref, watch } from "vue";
+import { useRoute } from "vue-router";
+import Header from "./components/header/header.vue";
+import HeaderEn from "./components/header-en/header-en.vue";
+import Footer from "./components/footer/footer.vue";
+
+const route = useRoute();
+const currentLanguage = ref("pt");
+
+watch(
+  () => route.path,
+  (path) => {
+    currentLanguage.value = path.includes("-en") ? "en" : "pt";
   },
-  mounted(){
-    let url = window.location.pathname;
-    if (url.includes('en')) this.language = 'en';
-    else this.language = 'pt';
-  }
-}
+  { immediate: true },
+);
 </script>
-
-<style>
-#app {
-  font-family: 'Raleway Regular','Montserrat', Arial, sans-serif;
-}
-
-body {
-  background-color: #2C3E50;
-  background-image: linear-gradient(#2C3E50,#4CA1AF);
-  min-height: 100vh;
-}
-</style>

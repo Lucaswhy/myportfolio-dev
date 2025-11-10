@@ -1,46 +1,42 @@
-@import '@/assets/scss/_color.scss';
-
-div{
-    h2{
-        color: $fontColor;
-        text-align: center;
-    }
-    .div__main{
-    }
-
-}
-
-body{
-    color: $fontColor2;
-    text-align: justify;
-}
-
-.accordion-button:not(.collapsed){
-    background-color: $subColor;
+div {
+  h2 {
     color: $fontColor;
+    text-align: center;
+  }
+  .div__main {
+  }
 }
 
-.accordion-button{
-    background-color: $fontColor;
-    color: $bgtitleColor;
-    padding: 1px;
-    font-size: 20px;
-    height: 50px;
-    padding-left: 15px;
-
+body {
+  color: $fontColor2;
+  text-align: justify;
 }
 
-.accordion-button:after{
-    display: none;
-    background-image: none;
+.accordion-button:not(.collapsed) {
+  background-color: $subColor;
+  color: $fontColor;
 }
 
-.icon__arrow{
-    position: absolute;
-    right: 5%;
-    font-size:  24px;
+.accordion-button {
+  background-color: $fontColor;
+  color: $bgtitleColor;
+  padding: 1px;
+  font-size: 20px;
+  height: 50px;
+  padding-left: 15px;
 }
 
-.span__text{
-    color: $fontColor2;
+.accordion-button:after {
+  display: none;
+  background-image: none;
+}
+
+.icon__arrow {
+  position: absolute;
+  right: 5%;
+  font-size: 24px;
+}
+
+.span__text {
+  color: $fontColor2;
 }

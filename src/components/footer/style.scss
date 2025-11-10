@@ -1,34 +1,32 @@
-@import '@/assets/scss/_color.scss';
-
-div{
-    footer{
-        .footer__box{
-            font-family: 'Montserrat Light', 'Raleway Thin', Arial;
-            display: flex;
-            justify-content: space-between;
-            margin-top: 15px;
-            margin-bottom: 15px;
-            border-top: 1px solid $fontColor;
-            @media only screen and (max-width: 992px){
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            span{
-                font-size: 16px;
-                color: $fontColor;
-                padding-top: 10px;
-            }
-            div{
-                a{
-                    i{
-                    font-size: 20px;
-                    color: $fontColor;
-                    margin-left: 10px;
-                    cursor: pointer;
-                    }
-                }
-            }
+div {
+  footer {
+    .footer__box {
+      font-family: "Montserrat Light", "Raleway Thin", Arial;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      border-top: 1px solid $fontColor;
+      @media only screen and (max-width: 992px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      span {
+        font-size: 16px;
+        color: $fontColor;
+        padding-top: 10px;
+      }
+      div {
+        a {
+          i {
+            font-size: 20px;
+            color: $fontColor;
+            margin-left: 10px;
+            cursor: pointer;
+          }
         }
+      }
     }
+  }
 }
