@@ -1,29 +1,29 @@
 {
   "name": "myportfolio",
-  "version": "0.1.1",
+  "version": "1.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "vite",
+    "serve": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "bootstrap-icons": "^1.5.0",
-    "core-js": "^3.6.5",
-    "node-sass": "^6.0.1",
-    "vue": "^2.6.11",
-    "vue-cli": "^2.9.6",
-    "vue-router": "^3.5.2"
+    "bootstrap-icons": "^1.11.0",
+    "vue": "^3.3.11",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "sass-loader": "^10.1.1",
-    "vue-template-compiler": "^2.6.11"
+    "@vitejs/plugin-vue": "^4.5.2",
+    "@vue/tsconfig": "^0.4.0",
+    "eslint": "^8.52.0",
+    "eslint-plugin-vue": "^9.18.1",
+    "prettier": "^3.6.2",
+    "sass": "^1.69.5",
+    "vite": "^4.5.0",
+    "vue-eslint-parser": "^9.3.2"
   },
   "eslintConfig": {
     "root": true,
@@ -31,13 +31,17 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
+      "plugin:vue/vue3-essential",
       "eslint:recommended"
     ],
     "parserOptions": {
-      "parser": "babel-eslint"
+      "parser": "vue-eslint-parser",
+      "ecmaVersion": "latest",
+      "sourceType": "module"
     },
-    "rules": {}
+    "rules": {
+      "vue/multi-word-component-names": "off"
+    }
   },
   "browserslist": [
     "> 1%",

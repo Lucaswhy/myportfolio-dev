@@ -1,206 +1,204 @@
-@import '@/assets/scss/_color.scss';
-
-div{
-    :is(h2){
-        color: $fontColor;
-        justify-content: center;
-        font-size: 30px;
-        text-align: center;
-        margin-top: 2em;
-        @media only screen and (max-width: 992px){
-            font-size: 20px;
-        }
+div {
+  :is(h2) {
+    color: $fontColor;
+    justify-content: center;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 2em;
+    @media only screen and (max-width: 992px) {
+      font-size: 20px;
     }
+  }
 
-    :is(button){
-        background-color: $subColor;
-        color: $fontColor;
-        font-size: 16px;
-        border-radius: 10px;
-        min-width: 7em;
-        height: 3em;
-        line-height: 0px;
+  :is(button) {
+    background-color: $subColor;
+    color: $fontColor;
+    font-size: 16px;
+    border-radius: 10px;
+    min-width: 7em;
+    height: 3em;
+    line-height: 0px;
+  }
+
+  .div__resume {
+    font-family: "Raleway Regular", "Montserrat", Arial;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media only screen and (max-width: 992px) {
+      flex-wrap: wrap;
     }
-
-    .div__resume{
-        font-family: 'Raleway Regular','Montserrat',Arial;
-        display: flex;
-        justify-content: space-between;
-        align-items:center;
-        @media only screen and (max-width: 992px){
-            flex-wrap: wrap;
-        }
-        .div--resume{
-            max-width: 800px;
-            text-align: justify;
-            span{
-                font-size: 18px;
-                color: $fontColor;
-                @media only screen and (max-width: 992px){
-                    font-size: 16px;
-                }
-            }
-            p{
-                text-align: center;
-            }
-        }
-        .div__img{
-            @media only screen and (max-width: 992px){
-                order: -1;
-                margin: 0 auto;
-            }
-            figure{
-                width: 250px;
-                height: 250px;
-                border-radius: 50%;
-                overflow: hidden;
-                @media only screen and (max-width: 992px){
-                    width: 150px;
-                    height: 150px;
-                    margin-left: auto;
-                    order: 1;
-                }
-                img{
-                    width: 100%;
-                    height: auto;
-                }
-            }
-        }
-    }
-
-    .div__habilidade{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin-bottom: 10px;
-        .div--habilidade{
-            background-color: $fontColor;
-            border-radius: 15px;
-            max-width: 200px;
-            min-height: 300px;
-            color: $fontColor2;
-            font-size: 14px;
-            margin-top: 10px;
-            list-style-type: circle;
-            padding: 5px 15px 20px 15px;
-            text-align: center;
-            i{
-                font-size: 50px;
-                color: #231F20;
-            }
-            nav{
-                text-align: start;
-            };
-        }
-    }
-
-    .div__projeto{
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        min-height: 30vh;
-        @media only screen and (max-width: 992px){
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .div__descricao{
-            max-width: 400px;
-            min-height: 300px;
-            font-size: 18px;
-            @media only screen and (max-width: 992px){
-                min-height: 150px;
-                font-size: 16px;
-            }
-            span{
-                color: $fontColor;
-                a{
-                    color: $spotlightColor;
-                }
-            }
-            p{
-                text-align: center;
-                margin-top: 20px;
-            };
-        }
-        .div__carrossel{
-            width: 100%;
-            max-width: 800px;
-            border-radius: 10px;
-            position: relative;
-            @media only screen and (max-width: 992px){
-                max-width: 600px;
-            }
-            
-            .div__arrow{
-                overflow: hidden;
-                .carrossel__left{
-                    color: $spotlightColor;
-                    font-size: 40px;
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    z-index: 1;
-                }
-                
-                .carrossel__right{
-                    color: $spotlightColor;
-                    font-size: 40px;
-                    position: absolute;
-                    right: 0;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    z-index: 1;
-                }
-                img{
-                    width: 100%;
-                    height: auto;
-                    border-radius: 10px;
-                    max-height: 385px;
-                    min-height: 385px;
-                    @media only screen and (max-width: 1250px){
-                        max-height: 300px;
-                        min-height: 300px;
-                    }
-                    @media only screen and (max-width: 575px){
-                        max-height: 184px;
-                        min-height: 184px;
-                    }
-                }
-                .slide-leave-active,
-                .slide-enter-active {
-                transition: 1s;
-                }
-                .slide-enter {
-                transform: translate(100%, 0);
-                }
-                .slide-leave-to {
-                transform: translate(-100%, 0);
-                }
-                .slideback-leave-active,
-                .slideback-enter-active {
-                transition: 1s;
-                }
-                .slideback-enter {
-                transform: translate(-100%, 0);
-                }
-                .slideback-leave-to {
-                transform: translate(100%, 0);
-                }
-        }
-
-    }
-    }
-
-    .div__contato{
-        width: 100%;
-        height: 200px;
-        text-align: center;
-        background-color: $subColor;
-        color: $fontColor;
+    .div--resume {
+      max-width: 800px;
+      text-align: justify;
+      span {
         font-size: 18px;
-        div{
-            transform: translateY(50%);        
+        color: $fontColor;
+        @media only screen and (max-width: 992px) {
+          font-size: 16px;
         }
+      }
+      p {
+        text-align: center;
+      }
     }
-}
+    .div__img {
+      @media only screen and (max-width: 992px) {
+        order: -1;
+        margin: 0 auto;
+      }
+      figure {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        overflow: hidden;
+        @media only screen and (max-width: 992px) {
+          width: 150px;
+          height: 150px;
+          margin-left: auto;
+          order: 1;
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
 
+  .div__habilidade {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    .div--habilidade {
+      background-color: $fontColor;
+      border-radius: 15px;
+      max-width: 200px;
+      min-height: 300px;
+      color: $fontColor2;
+      font-size: 14px;
+      margin-top: 10px;
+      list-style-type: circle;
+      padding: 5px 15px 20px 25px;
+      text-align: center;
+      i {
+        font-size: 50px;
+        color: #231f20;
+      }
+      nav {
+        text-align: start;
+      }
+    }
+  }
+
+  .div__projeto {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 30vh;
+    @media only screen and (max-width: 992px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .div__descricao {
+      max-width: 400px;
+      min-height: 300px;
+      font-size: 18px;
+      @media only screen and (max-width: 992px) {
+        min-height: 150px;
+        font-size: 16px;
+      }
+      span {
+        color: $fontColor;
+        a {
+          color: $spotlightColor;
+        }
+      }
+      p {
+        text-align: center;
+        margin-top: 20px;
+      }
+    }
+    .div__carrossel {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 10px;
+      position: relative;
+      @media only screen and (max-width: 992px) {
+        max-width: 600px;
+      }
+
+      .div__arrow {
+        overflow: hidden;
+        .carrossel__left {
+          color: $spotlightColor;
+          font-size: 40px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 1;
+          padding-left: 10px;
+        }
+
+        .carrossel__right {
+          color: $spotlightColor;
+          font-size: 40px;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 1;
+          padding-right: 10px;
+        }
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 10px;
+          max-height: 385px;
+          min-height: 385px;
+          @media only screen and (max-width: 1250px) {
+            max-height: 300px;
+            min-height: 300px;
+          }
+          @media only screen and (max-width: 575px) {
+            max-height: 184px;
+            min-height: 184px;
+          }
+        }
+        .slide-leave-active,
+        .slide-enter-active {
+          transition: 1s;
+        }
+        .slide-enter {
+          transform: translate(100%, 0);
+        }
+        .slide-leave-to {
+          transform: translate(-100%, 0);
+        }
+        .slideback-leave-active,
+        .slideback-enter-active {
+          transition: 1s;
+        }
+        .slideback-enter {
+          transform: translate(-100%, 0);
+        }
+        .slideback-leave-to {
+          transform: translate(100%, 0);
+        }
+      }
+    }
+  }
+
+  .div__contato {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    background-color: $subColor;
+    color: $fontColor;
+    font-size: 18px;
+    div {
+      transform: translateY(50%);
+    }
+  }
+}

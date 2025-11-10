@@ -1,0 +1,12 @@
+@use "@/assets/scss/_color.scss" as *;
+
+#app {
+  font-family: "Raleway Regular", "Montserrat", Arial, sans-serif;
+}
+
+body {
+  background-color: $headerColor;
+  background-image: linear-gradient($headerColor, #4ca1af);
+  min-height: 100vh;
+  margin: 0;
+}
